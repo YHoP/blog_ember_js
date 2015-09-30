@@ -17,10 +17,10 @@
         {{input value=username id="username"}}
       </div>
 
-      <button {{action 'savePost' post}}>Save</button>
+      <button class="btn btn-info" {{action 'savePost' post}}>Save</button>
     </form>
   </div>
 
 {{else}}
-    <button {{action 'postFormShow'}}>New Post</button>
+    <button class="btn btn-info" {{action 'postFormShow'}}>New Post</button>
 {{/if}}

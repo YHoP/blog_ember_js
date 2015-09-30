@@ -17,10 +17,10 @@
         {{input value=username id="username" placeholder=post.username}}
       </div>
 
-      <button {{action 'updatePost' post}}>Update</button>
+      <button class="btn btn-info" {{action 'updatePost' post}}>Update</button>
     </form>
   </div>
 
 {{else}}
-    <button {{action 'updateFormShow'}}>Update Post</button>
+    <button class="btn btn-info" {{action 'updateFormShow'}}>Update Post</button>
 {{/if}}
