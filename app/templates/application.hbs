@@ -1,14 +1,15 @@
 <div class="container">
 <header class = "jumbotron">
 <h2 id="title">Welcome to Blog</h2>
-</header>
+
 
 <nav>
-  {{#link-to 'index'}}Home{{/link-to}}
-  {{#link-to 'about'}}About{{/link-to}}
-  {{#link-to 'contact'}}Contact{{/link-to}}
+  <span class="btn btn-primary">{{#link-to 'index'}} Home {{/link-to}}</span>
+  <span class="btn btn-success">{{#link-to 'about'}} About {{/link-to}}</span>
+  <span class="btn btn-info">{{#link-to 'contact'}} Contact {{/link-to}}</span>
 </nav>
 
+</header>
 
   {{outlet}}
 </div>

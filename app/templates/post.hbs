@@ -1,10 +1,16 @@
-<h2>{{model.title}}</h2>
-<p>by {{model.username}}</p>
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h2 class="panel-title">{{model.title}}</h2>
+  </div>
+  <div class="panel-body">
+    <p>by {{model.username}}</p>
 
-<h5>{{model.text}}</h5>
+    <h5>{{model.text}}</h5>
 
-<p>Posted on {{model.date_added}}</p>
+    <p>Posted on {{model.date_added}}</p>
 
-{{update-post post=model updatePost="updatePost"}}
-
-<button {{action 'deletePost' model}}>Delete</button>
+    {{update-post post=model updatePost="updatePost"}}
+    <br>
+    <button class="btn btn-danger" {{action 'deletePost' model}}>Delete</button>
+  </div>
+</div>
