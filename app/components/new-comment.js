@@ -12,7 +12,8 @@ export default Ember.Component.extend({
       var params = {
         text: this.get('text'),
         username: this.get('username'),
-        date_added: today.toString()
+        date_added: today.toString(),
+        post: this.post
       };
       this.set('addNewComment', false);
       this.sendAction('saveComment', params);
