@@ -1,9 +1,8 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  title: DS.attr(),
+  post: DS.belongsTo('post', { async: true }),
   text: DS.attr(),
   username: DS.attr(),
-  date_added: DS.attr(),
-  comment: DS.hasMany('comment', { async: true })
+  date_added: DS.attr()
 });

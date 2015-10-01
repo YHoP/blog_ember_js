@@ -1,9 +1,9 @@
 <h2>Posts</h2>
 
 <ul class="list-group">
-  {{#each model as |post|}}
+  {{#each model.posts as |post|}}
     <li class="list-group-item">{{#link-to 'post' post.id}}{{post.title}} - by {{post.username}}{{/link-to}}</li>
   {{/each}}
 </ul>
 
-{{new-post savePost="savePost"}}
+{{new-post savePost="savePost" post=model}}

@@ -1,0 +1,28 @@
+{{#if addNewComment}}
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title">New Comment</h3>
+  </div>
+    <div class="panel-body">
+    <form>
+      <!-- ?? how to get post id and pass into input
+      {{input type="hidden" value=model.posts id="post_id"}} -->
+
+      <div class="form-group">
+        <label class="col-md-2" for="username">User Name</label>
+        {{input value=username id="username"}}
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-2" for="text">Comment</label>
+        {{textarea value=text id="text"}}
+      </div>
+
+      <button class="btn btn-info" {{action 'saveComment' comment}}>Save</button>
+    </form>
+  </div>
+</div>
+
+{{else}}
+    <button class="btn btn-info" {{action 'commentFormShow'}}>New Comment</button>
+{{/if}}

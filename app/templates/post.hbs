@@ -14,3 +14,7 @@
     <button class="btn btn-danger" {{action 'deletePost' model}}>Delete</button>
   </div>
 </div>
+
+{{comment-detail post=model}}
+
+{{new-comment saveComment="saveComment" post=model}}
