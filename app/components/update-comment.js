@@ -6,13 +6,14 @@ export default Ember.Component.extend({
     updateCommentShow() {
       this.set('updateCommentForm', true);
     },
-    
     updateComment(comment) {
+      debugger;
       var today = new Date();
       var params = {
-        text: this.get('text'),
         username: this.get('username'),
-        date_added: today.toString()
+        text: this.get('text'),
+        date_added: today.toString(),
+        post: this.post
       };
       this.set('updateCommentForm', false);
       this.sendAction('updateComment', comment, params);
