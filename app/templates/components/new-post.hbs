@@ -3,18 +3,18 @@
   <div>
     <form>
       <div class="form-group">
-        <label for="title">Title</label>
+        <label class="col-md-2" for="username">User Name</label>
+        {{input value=username id="username"}}
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-2" for="title">Post Title</label>
         {{input value=title id="title"}}
       </div>
 
       <div class="form-group">
-        <label for="text">Text</label>
-        {{input value=text id="text"}}
-      </div>
-
-      <div class="form-group">
-        <label for="username">User Name</label>
-        {{input value=username id="username"}}
+        <label class="col-md-2" for="text">Text</label>
+        {{textarea value=text id="text"}}
       </div>
 
       <button class="btn btn-info" {{action 'savePost' post}}>Save</button>

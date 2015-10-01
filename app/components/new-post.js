@@ -7,7 +7,7 @@ export default Ember.Component.extend({
       this.set('addNewPost', true);
     },
 
-    savePost(post) {
+    savePost() {
       var today = new Date();
       var params = {
         title: this.get('title'),
